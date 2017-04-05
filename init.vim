@@ -2,6 +2,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'mgee/lightline-bufferline'
 
+Plug'tpope/vim-obsession'
+Plug 'dhruvasagar/vim-prosession'
+
 Plug 'tpope/vim-surround'
 
 Plug 'scrooloose/nerdtree'
