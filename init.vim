@@ -2,10 +2,10 @@ call plug#begin('~/.local/share/nvim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'mgee/lightline-bufferline'
 
-Plug'tpope/vim-obsession'
-Plug 'dhruvasagar/vim-prosession'
+Plug 'tpope/vim-obsession'
 
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
@@ -57,7 +57,7 @@ highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$\|\t/
 
 nmap <Leader>s :%s//g<Left><Left>
-
+map <Leader>n :NERDTreeToggle<CR>
 " Relative numbering
 function! NumberToggle()
   if(&relativenumber == 1)
@@ -115,6 +115,7 @@ let g:UltiSnipsExpandTrigger="<c-tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
+set statusline+=%{fugitive#statusline()}
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
