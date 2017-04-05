@@ -31,16 +31,20 @@ alias u='sudo pacman -Syu'
 alias timers='systemctl list-timers'
 alias ls='ls -l --color=auto'
 
-#misc
-export PATH="$PATH:$HOME/.local/bin"
-#npm
-export PATH="$PATH:$HOME/.node_modules/bin"
-#rust
-export PATH="$HOME/.cargo/bin:$PATH"
-#go
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gb='git branch'
+alias gco='git checkout'
+alias gp='git push'
+
 export GOPATH=$HOME/go
-export PATH=$PATH:$(go env GOPATH)/bin
-#rvm - keep it last
+
+export PATH="$PATH:$HOME/.local/bin"
+
+export PATH="$PATH:$HOME/.node_modules/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="$PATH:$(go env GOPATH)/bin"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 source /usr/share/autoenv/activate.sh

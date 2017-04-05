@@ -1,11 +1,12 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'mgee/lightline-bufferline'
-
-Plug 'tpope/vim-obsession'
-
+Plug 'thaerkh/vim-workspace'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'yggdroot/indentline'
+Plug 'easymotion/vim-easymotion'
+Plug 'luochen1990/rainbow'
 
 Plug 'scrooloose/nerdtree'
 Plug 'xuyuanp/nerdtree-git-plugin'
@@ -21,6 +22,9 @@ Plug 'vim-syntastic/syntastic'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'eagletmt/neco-ghc'
+
+Plug 'plasticboy/vim-markdown'
+Plug 'elzr/vim-json'
 
 call plug#end()
 
@@ -47,6 +51,20 @@ set number
 set ruler
 set linespace=0
 
+" Gif config
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+nmap s <Plug>(easymotion-overwin-f)
+nmap s <Plug>(easymotion-overwin-f2)
+
+let g:EasyMotion_smartcase = 1
+let g:EasyMotion_use_smartsign_us = 1
+let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
+
+let g:rainbow_active = 1
+
 if &listchars ==# 'eol:$'
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 endif
@@ -55,7 +73,8 @@ set list                " Show problematic characters.
 " Also highlight all tabs and trailing whitespace characters.
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$\|\t/
-
+let g:workspace_autosave_always = 1
+nnoremap <leader>w :ToggleWorkspace<CR>
 nmap <Leader>s :%s//g<Left><Left>
 map <Leader>n :NERDTreeToggle<CR>
 " Relative numbering
@@ -115,7 +134,6 @@ let g:UltiSnipsExpandTrigger="<c-tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-set statusline+=%{fugitive#statusline()}
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
