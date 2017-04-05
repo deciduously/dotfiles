@@ -22,6 +22,8 @@ Plug 'vim-syntastic/syntastic'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'eagletmt/neco-ghc'
+Plug 'nbouscal/vim-stylish-haskell'
+Plug 'twinside/vim-hoogle'
 
 Plug 'plasticboy/vim-markdown'
 Plug 'elzr/vim-json'
@@ -77,6 +79,8 @@ let g:workspace_autosave_always = 1
 nnoremap <leader>w :ToggleWorkspace<CR>
 nmap <Leader>s :%s//g<Left><Left>
 map <Leader>n :NERDTreeToggle<CR>
+map <Leader>h :Hoogle<CR>
+
 " Relative numbering
 function! NumberToggle()
   if(&relativenumber == 1)
