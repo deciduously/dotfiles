@@ -1,0 +1,18 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: '.'
+    ~/.zshrc: .zshrc
+    ~/.zlogin: .zlogin
+    ~/.config/nvim/init.vim: init.vim
+    ~/.shell_prompt.sh: .shell_prompt.sh
+    ~/.stack/config.yaml: config.yaml 
+    ~/.Xresources: .Xresources
+    ~/.xmonad/xmonad.hs: xmonad.hs
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]

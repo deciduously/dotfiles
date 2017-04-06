@@ -3,6 +3,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'mgee/lightline-bufferline'
 Plug 'thaerkh/vim-workspace'
 Plug 'tpope/vim-surround'
+Plug 'godlygeek/tabular'
 Plug 'tpope/vim-fugitive'
 Plug 'yggdroot/indentline'
 Plug 'easymotion/vim-easymotion'
@@ -14,20 +15,23 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 Plug 'edkolev/promptline.vim'
 
 Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --system-libclang  --racer-completer --tern-completer --gocode-completer' }
-Plug 'godlygeek/tabular'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-Plug 'vim-syntastic/syntastic'
+Plug 'neomake/neomake'
+
+Plug 'bitc/vim-hdevtools'
+Plug 'neovimhaskell/haskell-vim'
 Plug 'eagletmt/ghcmod-vim'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'eagletmt/neco-ghc'
-Plug 'nbouscal/vim-stylish-haskell'
 Plug 'twinside/vim-hoogle'
 
 Plug 'plasticboy/vim-markdown'
 Plug 'elzr/vim-json'
 
+Plug 'raichoo/purescript-vim'
+Plug 'FrigoEU/psc-ide-vim'
 call plug#end()
 
 set background=dark
@@ -53,7 +57,6 @@ set number
 set ruler
 set linespace=0
 
-" Gif config
 map <Leader>l <Plug>(easymotion-lineforward)
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
@@ -75,8 +78,8 @@ set list                " Show problematic characters.
 " Also highlight all tabs and trailing whitespace characters.
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$\|\t/
-let g:workspace_autosave_always = 1
-nnoremap <leader>w :ToggleWorkspace<CR>
+
+nnoremap <leader>v :ToggleWorkspace<CR>
 nmap <Leader>s :%s//g<Left><Left>
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>h :Hoogle<CR>
@@ -138,12 +141,7 @@ let g:UltiSnipsExpandTrigger="<c-tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
+augroup NeomakeHaskell
+  autocmd!
+  autocmd! BufWritePost *.hs Neomake
+augroup END

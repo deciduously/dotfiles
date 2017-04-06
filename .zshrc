@@ -40,11 +40,11 @@ alias gp='git push'
 
 export GOPATH=$HOME/go
 
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="$HOME/.local/bin:$PATH"
 
-export PATH="$PATH:$HOME/.node_modules/bin"
-export PATH="$PATH:$HOME/.cargo/bin"
-export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$HOME/.node_modules/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$(go env GOPATH)/bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin"
 
 source /usr/share/autoenv/activate.sh
