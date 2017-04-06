@@ -1,6 +1,8 @@
 call plug#begin('~/.local/share/nvim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'mgee/lightline-bufferline'
+Plug 'rafi/awesome-vim-colorschemes'
+Plug 'chriskempson/base16-vim'
 Plug 'thaerkh/vim-workspace'
 Plug 'tpope/vim-surround'
 Plug 'godlygeek/tabular'
@@ -35,7 +37,7 @@ Plug 'FrigoEU/psc-ide-vim'
 call plug#end()
 
 set background=dark
-colorscheme solarized
+colorscheme materialbox
 
 syntax on
 filetype plugin indent on
@@ -105,7 +107,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
+      \ 'colorscheme': 'wombat',
       \ 'component': {
       \   'readonly': '%{&readonly?"":""}',
       \ },
@@ -115,8 +117,8 @@ let g:lightline = {
       \ 'component_expand': {'buffers': 'lightline#bufferline#buffers'},
       \ 'component_type':  {'buffers': 'tabsel'}
       \ }
-let g:promptline_preset = 'full'
-let g:promptline_theme = 'jelly'
+let g:promptline_preset = 'clear'
+let g:promptline_theme = 'lightline'
 set showtabline=2
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif

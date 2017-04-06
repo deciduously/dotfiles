@@ -31,6 +31,9 @@ alias u='sudo pacman -Syu'
 alias timers='systemctl list-timers'
 alias ls='ls -l --color=auto'
 
+alias ghc='stack exec -- ghc'
+alias ghci='stack exec -- ghci'
+
 alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
@@ -49,3 +52,5 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 source /usr/share/autoenv/activate.sh
 source ~/.shell_prompt.sh
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
