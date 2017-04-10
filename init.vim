@@ -16,10 +16,10 @@ Plug 'xuyuanp/nerdtree-git-plugin'
 
 Plug 'edkolev/promptline.vim'
 
-Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --system-libclang  --racer-completer --tern-completer --gocode-completer' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --system-libclang  --racer-completer --tern-completer --gocode-completer' }
 Plug 'neomake/neomake'
 
 Plug 'bitc/vim-hdevtools'

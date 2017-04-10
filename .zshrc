@@ -30,6 +30,7 @@ alias top=htop
 alias u='sudo pacman -Syu'
 alias timers='systemctl list-timers'
 alias ls='ls -l --color=auto'
+alias reboot='sudo reboot'
 
 alias ghc='stack exec -- ghc'
 alias ghci='stack exec -- ghci'
