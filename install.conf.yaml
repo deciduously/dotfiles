@@ -5,11 +5,11 @@
 - clean: ['~']
 
 - link:
-    ~/.dotfiles: '.'
     ~/.config/nvim/init.vim: init.vim
     ~/.shell_prompt.sh: .shell_prompt.sh
     ~/.stack/config.yaml: config.yaml
     ~/.zlogin: .zlogin
+    ~/.zprofile: .zprofile
     ~/.zshrc: .zshrc
     ~/.Xresources: .Xresources
     ~/.xmonad/xmonad.hs: xmonad.hs
