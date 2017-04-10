@@ -8,11 +8,12 @@
     ~/.config/nvim/init.vim: init.vim
     ~/.shell_prompt.sh: .shell_prompt.sh
     ~/.stack/config.yaml: config.yaml
+    ~/.xinitrc: .xinitrc
+    ~/.Xresources: .Xresources
+    ~/.xmonad/xmonad.hs: xmonad.hs
     ~/.zlogin: .zlogin
     ~/.zprofile: .zprofile
     ~/.zshrc: .zshrc
-    ~/.Xresources: .Xresources
-    ~/.xmonad/xmonad.hs: xmonad.hs
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
