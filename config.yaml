@@ -12,3 +12,5 @@ templates:
     author-email: bendlovy@gmail.com
     copyright: "2017 Ben Lovy"
     github-username: deciduously
+
+system-ghc: true

@@ -6,12 +6,11 @@
 
 - link:
     ~/.dotfiles: '.'
-    ~/.zshrc: .zshrc
-    ~/.zlogin: .zlogin
     ~/.config/nvim/init.vim: init.vim
     ~/.shell_prompt.sh: .shell_prompt.sh
     ~/.stack/config.yaml: config.yaml
-    ~/.vimrc_background: .vimrc_background
+    ~/.zlogin: .zlogin
+    ~/.zshrc: .zshrc
     ~/.Xresources: .Xresources
     ~/.xmonad/xmonad.hs: xmonad.hs
 
