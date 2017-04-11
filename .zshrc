@@ -35,15 +35,6 @@ alias reboot='sudo reboot'
 alias ghc='stack exec -- ghc'
 alias ghci='stack exec -- ghci'
 
-export GOPATH=$HOME/go
-
-export PATH="$HOME/.local/bin:$PATH"
-
-export PATH="$HOME/.node_modules/bin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
-export PATH="$(go env GOPATH)/bin:$PATH"
-export PATH="$PATH:$HOME/.rvm/bin"
-
 source ~/.dotfiles/autoenv/activate.sh
 source ~/.shell_prompt.sh
 BASE16_SHELL=$HOME/.config/base16-shell/

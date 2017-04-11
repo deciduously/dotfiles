@@ -11,6 +11,7 @@
     ~/.stack/config.yaml: config.yaml
     ~/.xinitrc: .xinitrc
     ~/.Xresources: .Xresources
+    ~/.xmobarrc: .xmobarrc
     ~/.xmonad/xmonad.hs: xmonad.hs
     ~/.zlogin: .zlogin
     ~/.zprofile: .zprofile
