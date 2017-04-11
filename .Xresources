@@ -23,4 +23,4 @@ URxvt.font: 	fonts
 URxvt.boldFont: fonts
 URxvt.italicFont: fonts
 URxvt.boldItalicFonts: fonts
-! URxvt.letterSpace:      -1
+URxvt.letterSpace:      -1

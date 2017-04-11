@@ -5,6 +5,7 @@
 - clean: ['~']
 
 - link:
+    ~/.spacemacs: .spacemacs
     ~/.config/nvim/init.vim: init.vim
     ~/.shell_prompt.sh: .shell_prompt.sh
     ~/.stack/config.yaml: config.yaml
