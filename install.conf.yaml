@@ -12,7 +12,6 @@
     ~/.stalonetrayrc: .stalonetrayrc
     ~/.xinitrc: .xinitrc
     ~/.Xresources: .Xresources
-    ~/.xsessionrc: .xsessionrc
     ~/.xmobarrc: .xmobarrc
     ~/.xmonad/xmonad.hs: xmonad.hs
     ~/.zlogin: .zlogin
