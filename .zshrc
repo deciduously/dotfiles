@@ -35,6 +35,8 @@ alias reboot='sudo reboot'
 alias ghc='stack exec -- ghc'
 alias ghci='stack exec -- ghci'
 
+export VDPAU_DRIVER=radeon
+
 source ~/.dotfiles/autoenv/activate.sh
 source ~/.shell_prompt.sh
 BASE16_SHELL=$HOME/.config/base16-shell/
