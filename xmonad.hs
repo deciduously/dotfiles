@@ -16,7 +16,7 @@ main = do
     , layoutHook = avoidStruts $ layoutHook base
     , logHook = dynamicLogWithPP xmobarPP
                   { ppOutput = hPutStrLn xmproc
-                  , ppTitle = xmobarColor "green" "" . shorten 50
+                  , ppTitle = shorten 21
                   }
     , terminal          = myTerminal
     , modMask           = myModMask

@@ -7,18 +7,17 @@ Config { font = "xft:Sauce Code Pro:size=9"
         , persistent = True
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "%StdinReader% | %multicpu% - %gettemp%C | %memory% | %eth0% %wlan0% }{ %KNYC% | %uname% | <fc=#ee9a00>%date%</fc>"
+        , template = "<fc=#afc4db>%StdinReader%</fc>  <fc=#8f9d6a>%uname%</fc>  <fc=#cf6a4c>%multicpu% - %gettemp%°C</fc>  <fc=#cda869>%memory%</fc>  <fc=#89b859>%disku%</fc>  <fc=#00AAAA>%wlan0wi%</fc> }{ %KNYC%  <fc=#9b703f>%date%</fc> <fc=#afc4db>%time%</fc>"
         , commands =
-              [ Run Weather "KNYC"          [ "-t", "<skyCondition> | <fc=#4682B4><tempF></fc>°F | <fc=#4682B4><rh></fc>%h" ] 36000
-              , Run Network "eth0"           ["-L","0","-H","32","--normal","green","--high","red"] 10
-              , Run Network "wlan0"          ["-L","0","-H","32","--normal","green","--high","red"] 10
-              , Run MultiCpu                 [ "-t", "<total0>%|<total1>%|<total2>%|<total3>%"
-                                             , "-L","3","-H","50","--normal","green","--high","red"
-                                             ] 10
-              , Run Memory                   ["-t","Mem: <usedratio>%"] 10
-              , Run Com "gettemp"            [] "" 100
+              [ Run Weather "KNYC"           [ "-t", "<skyCondition> <fc=#4682B4><tempF></fc>°F <fc=#4682B4><rh></fc>%" ] 36000
+              , Run Wireless "wlan0"         [] 10
+              , Run MultiCpu                 [ "-t", "<total0>%|<total1>%|<total2>%|<total3>%"] 10
+              , Run Memory                   ["-t","<usedratio>% (<cache>M)"] 10
+              , Run Com "gettemp"            [] "" 1000
               , Run Com "uname"              ["-s","-r"] "" 0
-              , Run Date                     "%a %b %_d %Y %H:%M:%S" "date" 10
+              , Run DiskU                    [("/", "<used>/<size>"), ("/home", "<used>/<size>")] [] 20
+              , Run Date                     "%a %b %_d %Y" "date" 10
+              , Run Date                     "%H:%M:%S" "time" 10
               , Run StdinReader
               ]
         }
