@@ -10,6 +10,7 @@ stalonetray &
 # Fire up apps
 redshift &
 feh --bg-fill img/naturewarm.jpg &
+unclutter -b
 xscreensaver -no-splash &
 
 if [ -x /usr/bin/nm-applet ] ; then
