@@ -7,7 +7,7 @@ Config { font = "xft:Sauce Code Pro:size=9"
         , persistent = True
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "%StdinReader% | %multicpu% | %memory% | %eth0% %wlan0% }{ %KNYC% | %uname% | <fc=#ee9a00>%date%</fc>"
+        , template = "%StdinReader% | %multicpu% - %gettemp%C | %memory% | %eth0% %wlan0% }{ %KNYC% | %uname% | <fc=#ee9a00>%date%</fc>"
         , commands =
               [ Run Weather "KNYC"          [ "-t", "<skyCondition> | <fc=#4682B4><tempF></fc>°F | <fc=#4682B4><rh></fc>%h" ] 36000
               , Run Network "eth0"           ["-L","0","-H","32","--normal","green","--high","red"] 10
@@ -16,7 +16,8 @@ Config { font = "xft:Sauce Code Pro:size=9"
                                              , "-L","3","-H","50","--normal","green","--high","red"
                                              ] 10
               , Run Memory                   ["-t","Mem: <usedratio>%"] 10
-              , Run Com "uname"              ["-s","-r"] "" 36000
+              , Run Com "gettemp"            [] "" 100
+              , Run Com "uname"              ["-s","-r"] "" 0
               , Run Date                     "%a %b %_d %Y %H:%M:%S" "date" 10
               , Run StdinReader
               ]

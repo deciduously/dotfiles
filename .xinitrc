@@ -8,14 +8,17 @@ xrdb -merge .Xresources
 stalonetray &
 
 # Fire up apps
-
+redshift &
 feh --bg-fill img/naturewarm.jpg &
-#udiskie &
-#xfce4-power-manager &
 xscreensaver -no-splash &
 
 if [ -x /usr/bin/nm-applet ] ; then
    nm-applet --sm-disable &
+fi
+
+if [ -x /usr/bin/lxqt-powermanagement ] ; then
+    sleep 3
+    lxqt-powermanagement &
 fi
 
 exec xmonad
