@@ -5,17 +5,15 @@ import XMonad.Util.Run (spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 
---baseConfig = desktopConfig
-
 main = do
   xmproc <- spawnPipe "xmobar"
 
-  xmonad $ defaultConfig
-    { manageHook = manageDocks <+> manageHook defaultConfig
-    , layoutHook = avoidStruts $ layoutHook defaultConfig
+  xmonad $ def
+    { manageHook = manageDocks <+> manageHook def
+    , layoutHook = avoidStruts $ layoutHook def
     , logHook = dynamicLogWithPP xmobarPP
                   { ppOutput = hPutStrLn xmproc
-                    , ppTitle = xmobarColor "green" "" . shorten 50
+                  , ppTitle = xmobarColor "green" "" . shorten 50
                   }
     , terminal          = myTerminal
     , modMask           = myModMask
