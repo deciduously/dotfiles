@@ -7,9 +7,9 @@ Config { font = "xft:Sauce Code Pro:size=9"
         , persistent = True
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "%StdinReader% | %multicpu% | %memory% | %eth0% %wlan0% }{ <fc=#ee9a00>%date%</fc> | %uname% | %KLGA% "
+        , template = "%StdinReader% | %multicpu% | %memory% | %eth0% %wlan0% }{ <fc=#ee9a00>%date%</fc> | %uname% | %KNYC% "
         , commands =
-              [ Run Weather "KLGA"          [ "-t", "<skyCondition> | <fc=#4682B4><tempF></fc>°F | <fc=#4682B4><rh></fc>%" ] 36000
+              [ Run Weather "KNYC"          [ "-t", "<skyCondition> | <fc=#4682B4><tempF></fc>°F | <fc=#4682B4><rh></fc>%" ] 36000
               , Run Network "eth0"           ["-L","0","-H","32","--normal","green","--high","red"] 10
               , Run Network "wlan0"          ["-L","0","-H","32","--normal","green","--high","red"] 10
               , Run MultiCpu                 [ "-t", "<total0>%|<total1>%|<total2>%|<total3>%"

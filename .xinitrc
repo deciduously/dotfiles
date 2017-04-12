@@ -12,7 +12,7 @@ stalonetray &
 feh --bg-fill img/naturewarm.jpg &
 #udiskie &
 #xfce4-power-manager &
-#xscreensaver -no-splash &
+xscreensaver -no-splash &
 
 if [ -x /usr/bin/nm-applet ] ; then
    nm-applet --sm-disable &
