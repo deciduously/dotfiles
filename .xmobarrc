@@ -1,15 +1,15 @@
 Config { font = "xft:Sauce Code Pro:size=9"
         , borderColor = "black"
-        , border = BottomB
+        , border = TopB
         , bgColor = "black"
         , fgColor = "grey"
-        , position = TopW L 100
+        , position = BottomW L 100
         , persistent = True
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "%StdinReader% | %multicpu% | %memory% | %eth0% %wlan0% }{ <fc=#ee9a00>%date%</fc> | %uname% | %KNYC% "
+        , template = "%StdinReader% | %multicpu% | %memory% | %eth0% %wlan0% }{ %KNYC% | %uname% | <fc=#ee9a00>%date%</fc>"
         , commands =
-              [ Run Weather "KNYC"          [ "-t", "<skyCondition> | <fc=#4682B4><tempF></fc>°F | <fc=#4682B4><rh></fc>%" ] 36000
+              [ Run Weather "KNYC"          [ "-t", "<skyCondition> | <fc=#4682B4><tempF></fc>°F | <fc=#4682B4><rh></fc>%h" ] 36000
               , Run Network "eth0"           ["-L","0","-H","32","--normal","green","--high","red"] 10
               , Run Network "wlan0"          ["-L","0","-H","32","--normal","green","--high","red"] 10
               , Run MultiCpu                 [ "-t", "<total0>%|<total1>%|<total2>%|<total3>%"
