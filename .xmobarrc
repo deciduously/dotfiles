@@ -13,9 +13,9 @@ Config { font = "xft:Sauce Code Pro:size=9"
               , Run Wireless "wlan0"         [] 10
               , Run MultiCpu                 [ "-t", "<total0>%|<total1>%|<total2>%|<total3>%"] 10
               , Run Memory                   ["-t","<usedratio>% (<cache>M)"] 10
-              , Run Com "gettemp"            [] "" 1000
-              , Run Com "uname"              ["-s","-r"] "" 0
-              , Run DiskU                    [("/", "<used>/<size>"), ("/home", "<used>/<size>")] [] 20
+              , Run Com "gettemp"            [] "" 20
+              , Run Com "uname"              ["-n","-r"] "" 0
+              , Run DiskU                    [("/", "<used> (<usedp>%)"), ("/home", "<used> (<usedp>%)")] [] 20
               , Run Date                     "%a %b %_d %Y" "date" 10
               , Run Date                     "%H:%M:%S" "time" 10
               , Run StdinReader
