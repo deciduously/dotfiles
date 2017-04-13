@@ -16,7 +16,6 @@
     ~/.Xresources: .Xresources
     ~/.xmobarrc: .xmobarrc
     ~/.xmonad/xmonad.hs: xmonad.hs
-    ~/.xscreensaver: .xscreensaver
     ~/.zlogin: .zlogin
     ~/.zprofile: .zprofile
     ~/.zshrc: .zshrc
