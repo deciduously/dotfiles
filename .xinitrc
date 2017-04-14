@@ -9,7 +9,7 @@ stalonetray &
 
 # Fire up apps
 redshift &
-feh --bg-fill img/naturewarm.jpg &
+feh --bg-fill img/futurecopter.jpg &
 unclutter -b
 xscreensaver -no-splash &
 

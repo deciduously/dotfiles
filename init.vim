@@ -34,6 +34,8 @@ Plug 'elzr/vim-json'
 
 Plug 'raichoo/purescript-vim'
 Plug 'FrigoEU/psc-ide-vim'
+
+Plug 'kovisoft/slimv'
 call plug#end()
 
 set background=dark
@@ -71,6 +73,7 @@ let g:EasyMotion_use_smartsign_us = 1
 let g:EasyMotion_startofline = 0 " keep cursor column when JK motion
 
 let g:rainbow_active = 1
+let g:lisp_rainbow=1
 
 if &listchars ==# 'eol:$'
   set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+

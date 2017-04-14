@@ -7,6 +7,7 @@
 - link:
     ~/.config/redshift.conf: redshift.conf
     ~/.local/bin/gettemp: gettemp.sh
+    ~/.sbclrc: .sbclrc
     ~/.spacemacs: .spacemacs
     ~/.config/nvim/init.vim: init.vim
     ~/.shell_prompt.sh: .shell_prompt.sh
