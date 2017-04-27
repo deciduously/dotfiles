@@ -11,3 +11,5 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export VDPAU_DRIVER=r600
 
 LOCALE_ARCHIVE=$HOME/.nix-profile/lib/locale/locale-archiv
+
+export PATH="$HOME/.cargo/bin:$PATH"

@@ -9,13 +9,13 @@ stalonetray &
 
 # Fire up apps
 redshift &
-feh --bg-fill img/futurecopter.jpg &
+feh --bg-fill img/loops.jpg &
 unclutter -b
 xscreensaver -no-splash &
 
-if [ -x /usr/bin/nm-applet ] ; then
-   nm-applet --sm-disable &
-fi
+#if [ -x /usr/bin/wpa_gui ] ; then
+#   wpa_gui &
+#fi
 
 if [ -x /usr/bin/lxqt-powermanagement ] ; then
     sleep 3

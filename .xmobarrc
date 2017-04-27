@@ -1,4 +1,4 @@
-Config { font = "xft:Sauce Code Pro:size=9"
+Config { font = "xft:Sauce Code Pro:size=10"
         , borderColor = "black"
         , border = TopB
         , bgColor = "black"
@@ -7,15 +7,15 @@ Config { font = "xft:Sauce Code Pro:size=9"
         , persistent = True
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "<fc=#afc4db>%StdinReader%</fc>  <fc=#8f9d6a>%uname%</fc>  <fc=#cf6a4c>%multicpu% - %gettemp%°C</fc>  <fc=#cda869>%memory%</fc>  <fc=#89b859>%disku%</fc>  <fc=#00AAAA>%wlan0wi%</fc> }{ %KNYC%  <fc=#9b703f>%date%</fc> <fc=#afc4db>%time%</fc>"
+        , template = "<fc=#afc4db>%StdinReader%</fc>  <fc=#8f9d6a>%uname%</fc>  <fc=#cf6a4c>%multicpu% - %gettemp%°C</fc>  <fc=#cda869>%memory%</fc>  <fc=#89b859>%disku%</fc>  <fc=#00AAAA>%wlp2s0wi%</fc> }{ %KNYC%  <fc=#9b703f>%date%</fc> <fc=#afc4db>%time%</fc>"
         , commands =
               [ Run Weather "KNYC"           [ "-t", "<skyCondition> <fc=#4682B4><tempF></fc>°F <fc=#4682B4><rh></fc>%" ] 36000
-              , Run Wireless "wlan0"         [] 10
-              , Run MultiCpu                 [ "-t", "<total0>%|<total1>%|<total2>%|<total3>%"] 10
+              , Run Wireless "wlp2s0"        [] 10
+	      , Run MultiCpu                 [ "-t", "<total0>%|<total1>%|<total2>%|<total3>%"] 10
               , Run Memory                   ["-t","<usedratio>% (<cache>M)"] 10
               , Run Com "gettemp"            [] "" 20
               , Run Com "uname"              ["-n","-r"] "" 0
-              , Run DiskU                    [("/", "<used> (<usedp>%)"), ("/home", "<used> (<usedp>%)")] [] 20
+              , Run DiskU                    [("/", "<used> (<usedp>%)")] [] 20
               , Run Date                     "%a %b %_d %Y" "date" 10
               , Run Date                     "%H:%M:%S" "time" 10
               , Run StdinReader
