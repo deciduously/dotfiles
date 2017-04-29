@@ -19,7 +19,7 @@ Plug 'edkolev/promptline.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-Plug 'valloric/youcompleteme', { 'do': './install.py --clang-completer --system-libclang  --racer-completer --tern-completer --gocode-completer' }
+Plug 'valloric/youcompleteme', { 'do': ' ./install.py --racer-completer --tern-completer --gocode-completer' }
 Plug 'neomake/neomake'
 
 Plug 'bitc/vim-hdevtools'
@@ -36,6 +36,8 @@ Plug 'raichoo/purescript-vim'
 Plug 'FrigoEU/psc-ide-vim'
 
 Plug 'zah/nim.vim'
+
+Plug 'fatih/vim-go'
 call plug#end()
 
 set background=dark
