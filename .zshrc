@@ -31,6 +31,7 @@ alias u='sudo pacman -Syu'
 alias timers='systemctl list-timers'
 alias ls='ls -l --color=auto'
 alias reboot='sudo reboot'
+alias clojurei='java -cp /usr/share/clojure-1.8/lib/clojure.jar clojure.main'
 
 alias ghc='stack exec -- ghc'
 alias ghci='stack exec -- ghci'
@@ -43,3 +44,6 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
   . ~/.config/exercism/exercism_completion.zsh
 fi
+
+# opam configuration
+test -r /home/ben/.opam/opam-init/init.zsh && . /home/ben/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

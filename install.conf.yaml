@@ -10,6 +10,7 @@
     ~/.sbclrc: .sbclrc
     ~/.spacemacs: .spacemacs
     ~/.config/nvim/init.vim: init.vim
+    ~/.ocamlinit: .ocamlinit
     ~/.shell_prompt.sh: .shell_prompt.sh
     ~/.stack/config.yaml: config.yaml
     ~/.stalonetrayrc: .stalonetrayrc
