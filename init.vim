@@ -37,6 +37,11 @@ Plug 'FrigoEU/psc-ide-vim'
 
 Plug 'zah/nim.vim'
 
+Plug 'rust-lang/rust.vim'
+
+Plug 'posva/vim-vue'
+Plug 'othree/javascript-libraries-syntax.vim'
+
 Plug 'fatih/vim-go'
 call plug#end()
 
