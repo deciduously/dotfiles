@@ -19,7 +19,7 @@ Plug 'edkolev/promptline.vim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
-Plug 'valloric/youcompleteme', { 'do': ' ./install.py --racer-completer --tern-completer --gocode-completer' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'neomake/neomake'
 
 Plug 'bitc/vim-hdevtools'
@@ -133,9 +133,7 @@ set showtabline=2
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-let g:ycm_rust_src_path = '/home/deciduously/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src'
-let g:ycm_python_binary_path = '/usr/bin/python'
-let g:ycm_semantic_triggers = {'haskell' : ['.']}
+let g:deoplete#enable_at_startup = 1
 
 map <silent> tw :GhcModTypeInsert<CR>
 map <silent> ts :GhcModSplitFunCase<CR>

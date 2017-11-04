@@ -25,6 +25,7 @@ main = do
     , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
     , ((0, xK_Print), spawn "scrot")
     , ((myModMask, xK_g), spawn "chromium")
+    , ((myModMask, xK_f), spawn "firefox")
     , ((myModMask, xK_t), spawn "emacs")
     , ((myModMask, xK_n), spawn "pcmanfm-qt")
     ]
