@@ -13,6 +13,9 @@ feh --bg-fill img/loops.jpg &
 unclutter -b
 xscreensaver -no-splash &
 
+#exec --no-startup-id /usr/lib/kdeconnectd
+indicator-kdeconnectd &
+
 #if [ -x /usr/bin/wpa_gui ] ; then
 #   wpa_gui &
 #fi

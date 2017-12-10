@@ -27,17 +27,15 @@ antigen apply
 alias vi=nvim
 alias vim=nvim
 alias top=htop
-alias u='sudo emerge --sync && sudo emerge -uDN @world'
+alias u='sudo emerge --sync && sudo emerge -auDN @world'
 alias timers='systemctl list-timers'
 alias ls='ls -l --color=auto'
 alias reboot='sudo reboot'
 alias clojurei='java -cp /usr/share/clojure-1.8/lib/clojure.jar clojure.main'
 
-alias ghc='stack exec -- ghc'
-alias ghci='stack exec -- ghci'
-
 source ~/.dotfiles/autoenv/activate.sh
 source ~/.shell_prompt.sh
+
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
