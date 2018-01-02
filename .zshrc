@@ -43,12 +43,21 @@ if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
   . ~/.config/exercism/exercism_completion.zsh
 fi
 
-dir_resolve() {
-    local dir=`dirname "$1"`
-    local file=`basename "$1"`
-    pushd "$dir" &>/dev/null || return $? # return with error
-    echo "`pwd -P`/$file"
-    popd &> /dev/null
+function dir_resolve {
+    if [[ -d "$1" ]]
+    then
+        pushd "$1" >/dev/null
+        pwd
+        popd >/dev/null
+    elif [[ -e $1 ]]
+    then
+        pushd "$(dirname "$1")" >/dev/null
+        echo "$(pwd)/$(basename "$1")"
+        popd >/dev/null
+    else
+        echo "$1" does not exist! >&2
+        return 127
+    fi
 }
 
 # opam configuration
