@@ -43,5 +43,13 @@ if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
   . ~/.config/exercism/exercism_completion.zsh
 fi
 
+dir_resolve() {
+    local dir=`dirname "$1"`
+    local file=`basename "$1"`
+    pushd "$dir" &>/dev/null || return $? # return with error
+    echo "`pwd -P`/$file"
+    popd &> /dev/null
+}
+
 # opam configuration
 test -r /home/ben/.opam/opam-init/init.zsh && . /home/ben/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
