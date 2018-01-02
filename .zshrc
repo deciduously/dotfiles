@@ -27,7 +27,7 @@ antigen apply
 alias vi=nvim
 alias vim=nvim
 alias top=htop
-alias u='sudo emerge --sync && sudo emerge -auDN @world'
+alias u='time sudo emerge --sync && time sudo emerge -auDN --with-bdeps=y --keep-going @world'
 alias timers='systemctl list-timers'
 alias ls='ls -l --color=auto'
 alias reboot='sudo reboot'
