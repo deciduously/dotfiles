@@ -7,9 +7,9 @@ Config { font = "xft:Sauce Code Pro:size=10"
         , persistent = True
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "<fc=#afc4db>%StdinReader%</fc>  <fc=#8f9d6a>%uname%</fc>  <fc=#cf6a4c>%multicpu% - %gettemp%°C</fc>  <fc=#cda869>%memory%</fc>  <fc=#89b859>%disku%</fc>  <fc=#00AAAA>%wlp2s0wi%</fc> }{ %KNYC%  <fc=#9b703f>%date%</fc> <fc=#afc4db>%time%</fc>"
+        , template = "<fc=#afc4db>%StdinReader%</fc>  <fc=#8f9d6a>%uname%</fc>  <fc=#cf6a4c>%multicpu% - %gettemp%°C</fc>  <fc=#cda869>%memory%</fc> <fc=#89b859>%disku%</fc>  <fc=#00AAAA>%wlp2s0wi%</fc> }{ %KBED%  <fc=#9b703f>%date%</fc> <fc=#afc4db>%time%</fc>"
         , commands =
-              [ Run Weather "KNYC"           [ "-t", "<skyCondition> <fc=#4682B4><tempF></fc>°F <fc=#4682B4><rh></fc>%" ] 36000
+              [ Run Weather "KBED"           [ "-t", "<skyCondition> <fc=#4682B4><tempF></fc>°F <fc=#4682B4><rh></fc>%" ] 36000
               , Run Wireless "wlp2s0"        [] 10
 	      , Run MultiCpu                 [ "-t", "<total0>%|<total1>%|<total2>%|<total3>%"] 10
               , Run Memory                   ["-t","<usedratio>% (<cache>M)"] 10
