@@ -62,3 +62,5 @@ function dir_resolve {
 
 # opam configuration
 test -r /home/ben/.opam/opam-init/init.zsh && . /home/ben/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# source ~/.java9

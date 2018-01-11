@@ -29,7 +29,9 @@ if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
 fi
 
 # opam configuration
-test -r /home/ben/.opam/opam-init/init.zsh && . /home/ben/.opam/opam-init/init.zsh > 
-/dev/null $
+test -r /home/ben/.opam/opam-init/init.zsh && . /home/ben/.opam/opam-init/init.zsh > /dev/null $
 
-
+export GPG_TTY=$(tty)
+if [[ -n "$SSH_CONNECTION" ]] ;then
+  export PINENTRY_USER_DATA="USE_CURSES=1"
+fi
