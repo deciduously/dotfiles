@@ -21,20 +21,22 @@ antigen bundle command-not-found
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 
+antigen theme bira
+
 antigen apply
 # End Antigen Block
 
 alias vi=nvim
 alias vim=nvim
 alias top=htop
-alias u='time sudo emerge --sync && time sudo emerge -auDN --with-bdeps=y --keep-going @world'
+alias u='time sudo emerge --sync && time sudo emerge -auDNt --with-bdeps=y --keep-going @world'
 alias timers='systemctl list-timers'
 alias ls='ls -l --color=auto'
-alias reboot='sudo reboot'
+alias reboot='sudo shutdown -r now'
 alias clojurei='java -cp /usr/share/clojure-1.8/lib/clojure.jar clojure.main'
 
 source ~/.dotfiles/autoenv/activate.sh
-source ~/.shell_prompt.sh
+# source ~/.shell_prompt.sh
 
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
