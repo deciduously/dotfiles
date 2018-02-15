@@ -1,6 +1,6 @@
 export PATH="$HOME/.cargo/bin:$PATH"
 export GOPATH=$HOME/go
-
+export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 export PATH="$HOME/.node_modules/bin:$PATH"
@@ -34,3 +34,5 @@ export GPG_TTY=$(tty)
 if [[ -n "$SSH_CONNECTION" ]] ;then
   export PINENTRY_USER_DATA="USE_CURSES=1"
 fi
+
+export PATH="$HOME/.cargo/bin:$PATH"
