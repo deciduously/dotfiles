@@ -35,11 +35,6 @@ alias ls='ls -l --color=auto'
 alias reboot='sudo shutdown -r now'
 alias clojurei='java -cp /usr/share/clojure-1.8/lib/clojure.jar clojure.main'
 
-source ~/.dotfiles/autoenv/activate.sh
-# source ~/.shell_prompt.sh
-
-BASE16_SHELL=$HOME/.config/base16-shell/
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
   . ~/.config/exercism/exercism_completion.zsh
@@ -62,7 +57,3 @@ function dir_resolve {
     fi
 }
 
-# opam configuration
-test -r /home/ben/.opam/opam-init/init.zsh && . /home/ben/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
-# source ~/.java9
