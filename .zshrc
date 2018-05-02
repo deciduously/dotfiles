@@ -30,10 +30,11 @@ antigen apply
 alias vi=nvim
 alias vim=nvim
 alias top=htop
-alias u='time sudo emerge --sync && time sudo emerge -auDNt --with-bdeps=y --keep-going @world'
+alias u='time sudo eix-sync && time sudo layman -S && time sudo emerge -auDNt --with-bdeps=y --keep-going @world'
 alias timers='systemctl list-timers'
 alias ls='ls -l --color=auto'
-alias reboot='sudo shutdown -r now'
+alias reboot='sudo systemctl reboot'
+alias poweroff='sudo systemctl poweroff'
 alias clojurei='java -cp /usr/share/clojure-1.8/lib/clojure.jar clojure.main'
 
 
@@ -58,3 +59,5 @@ function dir_resolve {
     fi
 }
 
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

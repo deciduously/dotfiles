@@ -11,6 +11,7 @@ export PATH="$HOME/emsdk-portable:$PATH"
 export PATH="$HOME/emsdk-portable/clang/fastcomp/build_incoming_64/bin:$PATH"
 export PATH="$HOME/emsdk-portable/emscripten/incoming:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$HOME/emsdk-portable:$HOME/emsdk-portable/clang/fastcomp/build_incoming_64/bin:$HOME/emsdk-portable/node/8.9.1_64bit/bin:$HOME/emsdk-portable/emscripten/incoming:$PATH"
 
 export RUST_SRC_PATH="/home/ben/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src"
 
